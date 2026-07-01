@@ -68,12 +68,7 @@ void envoyerOctetManchester(uint8_t octet)
 
 void envoyerTrame(const Trame& trame)
 {
-    // Ici tu vas :
-    // 1- transformer la trame en tableau d'octets
-    // 2- encoder Manchester
-    // 3- envoyer sur PIN_TX
-
-
+    //Encodage Manchester
 
     // Envoyer le préambule
 
@@ -116,9 +111,6 @@ void envoyerTrame(const Trame& trame)
     envoyerOctetManchester((uint8_t)(trame.crc >> 8));
 
     envoyerOctetManchester((uint8_t)(trame.crc & 0xFF));
-
-
-
 
 
     // Envoyer le caractère de fin
@@ -190,20 +182,10 @@ uint8_t recevoirOctetManchester()
 
 bool recevoirTrame(Trame& trame)
 {
-
-    // Ici tu vas :
-    // 1- lire PIN_RX
-    // 2- décoder Manchester
-    // 3- reconstruire la trame
-
-
-
-
+    //Décodage Manchester
 
     // Lire le préambule
-
     trame.Preambule = recevoirOctetManchester();
-
 
 
     // Lire le start
@@ -220,10 +202,6 @@ bool recevoirTrame(Trame& trame)
     {
         return false;
     }
-
-
-
-
 
 
     // Lire l'entête
