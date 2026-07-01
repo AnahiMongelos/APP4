@@ -10,4 +10,11 @@ bool recevoirTrame(Trame& trame);
 
 void initialiserCommunication();
 
+// Encodage Manchester
+void envoyerOctetManchester(uint8_t octet);
+
+
+// Décodage Manchester
+uint8_t recevoirOctetManchester();
+
 #endif // COMMUNICATION_H
