@@ -66,9 +66,9 @@ void updateEmetteur() {
             Trame trameData = creerTrame(
                 TypeCommunication::data,
                 numeroSequence,
-                strlen(donnees),
+                strlen(donnees), //longueur de données
                 0,
-                (const uint8_t*)donnees
+                (const uint8_t*)donnees 
             );
 
 
