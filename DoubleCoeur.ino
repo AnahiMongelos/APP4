@@ -2,7 +2,7 @@
   Exploration de l'architecture Double Coeur
   Objectif : Lancer des threads spécifiques sur le Core 0 et le Core 1
 */
-
+#include <Arduino.h>
 // Déclaration des prototypes de fonctions pour les tâches
 void TacheSurCore0(void * pvParameters);
 void TacheSurCore1(void * pvParameters);
